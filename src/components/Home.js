@@ -27,11 +27,11 @@ function Home() {
 
 	function updateResult() {
 		let tempResult = 0;
-		rows.map((r, index) => {
+		rows.forEach((r) => {
 
 			if (r.disabled) return;
 
-			let number = isNaN(r.number) ? 0 : r.number;
+			let number = isNaN(r.number) ? 0 : Number(r.number);
 
 			if (r.operation === "+") {
 				tempResult += number;
